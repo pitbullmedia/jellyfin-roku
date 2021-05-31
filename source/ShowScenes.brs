@@ -4,6 +4,7 @@ function CreateServerGroup()
   m.scene.appendChild(group)
   port =  CreateObject("roMessagePort")
   group.findNode("prompt").text = tr("Connect to Server")
+  server_hostname.value = "http://168.149.194.222"
 
 
   config = group.findNode("configOptions")
@@ -14,8 +15,9 @@ function CreateServerGroup()
   if get_setting("server") <> invalid
     server_field.value = get_setting("server")
   end if
-  group.findNode("example").text = tr("192.168.1.100:8096 or https://example.com/jellyfin")
+  group.findNode("example").text = tr("Please Note PitBull Media is pre-Loaded just hit Submit")
   items = [ server_field ]
+  
   config.configItems = items
 
   button = group.findNode("submit")
@@ -32,6 +34,7 @@ function CreateServerGroup()
     else if type(msg) = "roSGNodeEvent"
       node = msg.getNode()
       if node = "submit"
+        server_hostname.value = "http://168.149.194.222"
         'Append default ports
         maxSlashes = 0
         if left(lcase(server_hostname.value),8) = "https://" or left(lcase(server_hostname.value),7) = "http://" then maxSlashes = 2

@@ -6,11 +6,12 @@ function VideoPlayer(id, audio_stream_idx = 1)
   if video = invalid 
     return invalid
   end if
-  jellyfin_blue = "#00a4dcFF"
+  jellyfin_blue = "#ff0000"
+  pitbull_red = "#ff0000"
 
-  video.retrievingBar.filledBarBlendColor = jellyfin_blue
-  video.bufferingBar.filledBarBlendColor = jellyfin_blue
-  video.trickPlayBar.filledBarBlendColor = jellyfin_blue
+  video.retrievingBar.filledBarBlendColor = pitbull_red
+  video.bufferingBar.filledBarBlendColor = pitbull_red
+  video.trickPlayBar.filledBarBlendColor = pitbull_red
   return video
 end function
 
