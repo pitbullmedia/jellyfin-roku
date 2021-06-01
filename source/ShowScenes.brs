@@ -4,7 +4,7 @@ function CreateServerGroup()
   m.scene.appendChild(group)
   port =  CreateObject("roMessagePort")
   group.findNode("prompt").text = tr("Connect to Server")
-  server_hostname.value = "http://168.149.194.222"
+
 
 
   config = group.findNode("configOptions")

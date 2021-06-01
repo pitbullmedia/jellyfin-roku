@@ -20,6 +20,7 @@
       numColumns = "6" 
       numRows = "5" 
       vertFocusAnimationStyle = "fixed"
+      
       itemSize = "[ 290, 425 ]" 
       itemSpacing = "[ 0, 45 ]" 
       drawFocusFeedback = "false" />  

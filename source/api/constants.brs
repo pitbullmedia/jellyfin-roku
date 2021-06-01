@@ -7,10 +7,11 @@ sub setConstants()
     globals.addFields({
         constants: {
 
-            poster_bg_pallet: ["#00455c", "#44bae1", "#00a4db", "#1c4c5c", "#007ea8"],
+            poster_bg_pallet: ["#00455c", "#ff0000", "#00a4db", "#1c4c5c", "#007ea8"],
         
             colors: {
                 button: "#ff0000"
+              
             },
 
             icons: {

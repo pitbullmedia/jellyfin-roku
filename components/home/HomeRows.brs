@@ -4,6 +4,7 @@ sub init()
   m.top.numRows = 2
 
   m.top.rowFocusAnimationStyle = "fixedFocusWrap"
+  m.top.focusBitmapBlendColor="#ff0000"
   m.top.vertFocusAnimationStyle = "fixedFocus"
 
   m.top.showRowLabel = [true]
@@ -57,13 +58,14 @@ sub onLibrariesLoaded()
   ' create My Media, Continue Watching, and Next Up rows
   content = CreateObject("roSGNode", "ContentNode")
   mediaRow = content.CreateChild("HomeRow")
-  mediaRow.title = tr("My Media")
+  mediaRow.title = tr("PitBull Media")
   continueRow = content.CreateChild("HomeRow")
   continueRow.title = tr("Continue Watching")
   nextUpRow = content.CreateChild("HomeRow")
   nextUpRow.title = tr("Next Up >")
+  ''helpsize
   sizeArray = [
-    [464, 311], ' My Media
+    [464, 331], ' My Media
     [464, 331], ' Continue Watching
     [464, 331]  ' Next Up
   ]

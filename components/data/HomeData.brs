@@ -86,7 +86,7 @@ sub setData()
             imgParams.Append({ "PercentPlayed": datum.UserData.PlayedPercentage })
         end if
 
-        imgParams.Append({ "maxHeight": 261 })
+        imgParams.Append({ "maxHeight": 500 })
         imgParams.Append({ "maxWidth": 175 })
 
         if datum.ImageTags.Primary <> invalid then

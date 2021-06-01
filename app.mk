@@ -27,7 +27,7 @@
 #    associated with the rokudev account.
 ##########################################################################
 
-BUILD = dev
+BUILD = beta
 
 DISTREL = $(shell pwd)/out
 COMMONREL ?= $(shell pwd)/common

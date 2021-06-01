@@ -6,7 +6,9 @@
       <!-- Background Bar -->
       <Poster id="menubg" uri="pkg:/images/option-menu-bg.9.png" width="800" height="100" />
 
-      <rectangle id="focus" />
+      <rectangle id="focus" 
+      			color="#ff0000"
+      			/>
 
       <LayoutGroup id="buttonGroup" layoutDirection="horiz" itemSpacings = "[75]" translation="[50,20]">
       </LayoutGroup>

@@ -27,7 +27,7 @@ sub setColors()
   if m.top.itemHasFocus
     color = "#101010FF"
   else
-    color = "#ffffffFF"
+    color = "#ff0000"
   end if
 
   m.name.color = color
