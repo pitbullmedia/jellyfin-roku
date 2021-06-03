@@ -65,9 +65,9 @@ sub onLibrariesLoaded()
   nextUpRow.title = tr("Next Up ")
   ''helpsize
   sizeArray = [
-    [466, 331], ' My Media
-    [466, 331], ' Continue Watching
-    [466, 331]  ' Next Up
+    [485, 331], ' My Media
+    [485, 331], ' Continue Watching
+    [485, 331]  ' Next Up
   ]
   ' validate library data
   if (m.libraryData <> invalid and m.libraryData.count() > 0) then
