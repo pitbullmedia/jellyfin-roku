@@ -1,7 +1,7 @@
 title=PitBull Media
 major_version=1
 minor_version=4
-build_version=116
+build_version=132
 mm_icon_focus_hd=pkg:/images/channel-poster_hd.png
 mm_icon_focus_sd=pkg:/images/channel-poster_sd.png
 mm_icon_focus_fhd=pkg:/images/channel-poster_fhd.png

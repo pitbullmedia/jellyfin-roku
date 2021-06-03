@@ -62,12 +62,12 @@ sub onLibrariesLoaded()
   continueRow = content.CreateChild("HomeRow")
   continueRow.title = tr("Continue Watching")
   nextUpRow = content.CreateChild("HomeRow")
-  nextUpRow.title = tr("Next Up >")
+  nextUpRow.title = tr("Next Up ")
   ''helpsize
   sizeArray = [
-    [464, 331], ' My Media
-    [464, 331], ' Continue Watching
-    [464, 331]  ' Next Up
+    [466, 331], ' My Media
+    [466, 331], ' Continue Watching
+    [466, 331]  ' Next Up
   ]
   ' validate library data
   if (m.libraryData <> invalid and m.libraryData.count() > 0) then
@@ -82,7 +82,7 @@ sub onLibrariesLoaded()
     for each lib in filteredLatest
       if lib.collectionType <> "boxsets" and lib.collectionType <> "livetv" then
         latestInRow = content.CreateChild("HomeRow")
-        latestInRow.title = tr("Latest in") + " " + lib.name + " >"
+        latestInRow.title = tr("Latest in") + " " + lib.name + " "
         sizeArray.Push([464, 331])
       end if
     end for
@@ -150,7 +150,7 @@ function updateNextUpItems()
   if itemData = invalid then return false
 
   homeRows = m.top.content
-  nextUpRowIndex = getRowIndex("Next Up >")
+  nextUpRowIndex = getRowIndex("Next Up ")
 
   if itemData.count() < 1 then
     if nextUpRowIndex <> invalid then
@@ -161,7 +161,7 @@ function updateNextUpItems()
   else
     ' remake row using the new data
     row = CreateObject("roSGNode", "HomeRow")
-    row.title = tr("Next Up") + " >"
+    row.title = tr("Next Up") + " "
     itemSize = [464, 331]
     for each item in itemData
       item.usePoster = row.usePoster
@@ -223,7 +223,7 @@ function updateLatestItems(msg)
   if itemData = invalid then return false
 
   homeRows = m.top.content
-  rowIndex = getRowIndex(tr("Latest in") + " " + node.metadata.title + " >")
+  rowIndex = getRowIndex(tr("Latest in") + " " + node.metadata.title + " ")
 
   if itemData.count() < 1 then
     ' remove row
@@ -234,12 +234,12 @@ function updateLatestItems(msg)
   else
     ' remake row using new data
     row = CreateObject("roSGNode", "HomeRow")
-    row.title = tr("Latest in") + " " + node.metadata.title + " >"
+    row.title = tr("Latest in") + " " + node.metadata.title + " "
     row.usePoster = true
     ' Handle specific types with different item widths
     if node.metadata.contentType = "movies" then
       row.imageWidth = 180
-      itemSize = [188, 331]
+      itemSize = [190, 331]
     else if node.metadata.contentType = "music" then
       row.imageWidth = 261
       itemSize = [261, 331]
